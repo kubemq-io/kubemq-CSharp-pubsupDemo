@@ -1,5 +1,5 @@
 # kubemq-CSharp-pubsupDemo
-Simple net Console apps to demonstarate pub sub patteren with a single message
+Simple net Console apps to demonstarate pub sub patteren.
 Docker images are avilble on kubemq/kubemqsub_demo:latest/kubemq/kubemqpub_demo:latest
 
 ## Getting Started
@@ -9,10 +9,10 @@ The demo code contains 2 projects:
 
 ### Prerequisites
 * Make sure you have a KubeMQ running and can access the KubeMQ GRPC port.
-* Create the environment varibale name "KubeMQServerAddress" and KubeMQ GRPC port as value.
-* You can change the clientID name by environment varibale CLIENT.
-* You can change the clientID name by environment varibale CHANNEL.
-when testing KubeMQ locally can do this by cmd.exe environment variables
+* Create the environment variable name "KubeMQServerAddress" and KubeMQ GRPC port as value.
+* You can change the clientID name by environment variable CLIENT.
+* You can change the clientID name by environment variable CHANNEL.
+when testing KubeMQ locally can do this by cmd.exe environment variable
 
 ```
 set KubeMQServerAddress=localaddress:50000
@@ -22,15 +22,16 @@ set KubeMQServerAddress=localaddress:50000
 Subscriber recives and handles published Channel messages by a HandleEventDelegate.
 
 ```
-  SubscribeRequest subscribeRequest = new SubscribeRequest()
+          //create KubeMQ.SDK.csharp.Subscription.SubscribeRequest
+          SubscribeRequest subscribeRequest = new SubscribeRequest()
             {
-                Channel = eventChannelName, //Subscribed channel name
+                Channel = ChannelName, //Subscribed channel name
                 SubscribeType = SubscribeType.Events, //sub channel pattern
-                ClientID = "sub_Demo"  //sub name ID
+                ClientID = ClientID  //sub name ID
             };
 
-            //create a new KubeMQ.SDK.csharp.Events.Subscriber (KubeMQServerAddress environment var)
-            Subscriber subscriber = new Subscriber();
+          //create a new KubeMQ.SDK.csharp.Events.Subscriber (KubeMQServerAddress environment var)
+          Subscriber subscriber = new Subscriber();
            
           /// SubscribeToEvents HandleEventDelegate anonymous 
           subscriber.SubscribeToEvents(subscribeRequest, (eventReceive) =>
@@ -44,12 +45,12 @@ Subscriber recives and handles published Channel messages by a HandleEventDelega
 ### Publisher
 Publisher published messages to a Channel.
 ```
- ChannelParameters eventChannelParameters = new ChannelParameters
+            ChannelParameters eventChannelParameters = new ChannelParameters
             {
                 //Publish channel name (must match the sub ChannelName)
-                ChannelName = eventChannelName,
+                ChannelName = ChannelName,
                 //pub name ID
-                ClientID = "pub_Demo"
+                ClientID = ClientID
             };
             //Create a new KubeMQ.SDK.csharp.Events.Channel 
             var eChannel = new Channel(eventChannelParameters);          
