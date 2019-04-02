@@ -1,5 +1,6 @@
 # kubemq-CSharp-pubsupDemo
 Simple net Console apps to demonstarate pub sub patteren with a single message
+Docker images are avilble on kubemq/kubemqsub_demo:latest/kubemq/kubemqpub_demo:latest
 
 ## Getting Started
 The demo code contains 2 projects:
@@ -9,7 +10,8 @@ The demo code contains 2 projects:
 ### Prerequisites
 * Make sure you have a KubeMQ running and can access the KubeMQ GRPC port.
 * Create the environment varibale name "KubeMQServerAddress" and KubeMQ GRPC port as value.
-
+* You can change the clientID name by environment varibale CLIENT.
+* You can change the clientID name by environment varibale CHANNEL.
 when testing KubeMQ locally can do this by cmd.exe environment variables
 
 ```
@@ -59,4 +61,14 @@ Publisher published messages to a Channel.
                     Body = Converter.ToByteArray("Hello there")
                 });
             }
+```
+## Running Docker
+plese change values [KubmqIp:GRPCPort] and CHANNEL=[ChannelName]
+### Subscriber
+```
+docker run -i -t -e KubeMQServerAddress=[KubmqIp:GRPCPort] -e CHANNEL=[ChannelName]   kubemq/kubemqsub_demo:latest
+```
+### Publisher
+```
+docker run -i -t -e KubeMQServerAddress=[KubmqIp:GRPCPort] -e CHANNEL=[ChannelName]   kubemq/kubemqpub_demo:latest
 ```
