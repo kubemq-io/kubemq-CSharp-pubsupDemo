@@ -25,7 +25,7 @@ Subscriber recives and handles published Channel messages by a HandleEventDelega
           /// SubscribeToEvents HandleEventDelegate anonymous 
           subscriber.SubscribeToEvents(subscribeRequest, (eventReceive) =>
           {
-              //decode message from byte[] using SDK helper BinaryFormatter
+              //KubeMQ.SDK.csharp.ToolsConverter.Converter.FromByteArray decode message from byte[]
               var recMsg = Converter.FromByteArray(eventReceive.Body);
               Console.WriteLine($"[Demo] Receive message ID:{eventReceive.EventID} received:{recMsg}");
           });
