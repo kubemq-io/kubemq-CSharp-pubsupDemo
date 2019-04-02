@@ -6,6 +6,7 @@ namespace KubeMQpub
 {
     class Program
     {
+        //The KubeMQ communication channel between pub sub
         const string eventChannelName = "TestCh_1";
         private static bool pubLoop=false;
 
@@ -64,7 +65,7 @@ namespace KubeMQpub
                 if (!result.Sent)
                 {
                     Console.WriteLine($"[Demo] Could not send message:{result.Error}");
-
+                    continue;
                 }
 
                 Console.WriteLine($"[Demo] Sent message ID:{result.EventID}");
