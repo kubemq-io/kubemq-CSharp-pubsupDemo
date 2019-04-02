@@ -1,8 +1,8 @@
 {
   "profiles": {
-    "Demo": {
+    "KubeMQpub": {
       "commandName": "Project",
-      "environmentVariables": {      
+      "environmentVariables": {
         "KubeMQServerAddress": "localhost:50000"
       }
     }

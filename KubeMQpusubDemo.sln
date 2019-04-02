@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubeMQpusubDemo", "KubeMQpusubDemo\KubeMQpusubDemo.csproj", "{3057C237-C6E5-427D-AA32-66094481D255}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubeMQpub", "KubeMQpub\KubeMQpub.csproj", "{36F3FD38-D8DD-4A4E-8EC0-AC85F6E52D11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubeMQsub", "KubeMQsub\KubeMQsub.csproj", "{4A3895BD-F6F4-4BE8-812F-B903DBBDE18A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +13,14 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3057C237-C6E5-427D-AA32-66094481D255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3057C237-C6E5-427D-AA32-66094481D255}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3057C237-C6E5-427D-AA32-66094481D255}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3057C237-C6E5-427D-AA32-66094481D255}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36F3FD38-D8DD-4A4E-8EC0-AC85F6E52D11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36F3FD38-D8DD-4A4E-8EC0-AC85F6E52D11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36F3FD38-D8DD-4A4E-8EC0-AC85F6E52D11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36F3FD38-D8DD-4A4E-8EC0-AC85F6E52D11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A3895BD-F6F4-4BE8-812F-B903DBBDE18A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A3895BD-F6F4-4BE8-812F-B903DBBDE18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A3895BD-F6F4-4BE8-812F-B903DBBDE18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A3895BD-F6F4-4BE8-812F-B903DBBDE18A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

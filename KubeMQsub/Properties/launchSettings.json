@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "KubeMQsub": {
+      "commandName": "Project",
+      "environmentVariables": {
+        "KubeMQServerAddress": "localhost:50000"
+      }
+    }
+  }
+}
