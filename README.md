@@ -1,12 +1,20 @@
 # kubemq-CSharp-pubsupDemo
-Simple netcore Console app to demonstarate pub sub patteren with a single message
+Simple net Console apps to demonstarate pub sub patteren with a single message
 
 ## Getting Started
-The demo code contains an event subscriber and sender
+The demo code contains 2 projects:
+* KubeMQpub event publisher 
+* KubeMQsub event subscriber
 
 ### Prerequisites
 * Make sure you have a KubeMQ running and can access the KubeMQ GRPC port.
 * Create the environment varibale name "KubeMQServerAddress" and KubeMQ GRPC port as value.
+
+when testing KubeMQ locally can do this by cmd.exe environment variables
+
+```
+set KubeMQServerAddress=localaddress:50000
+```
 
 ### Subscriber
 Subscriber recives and handles published Channel messages by a HandleEventDelegate.
