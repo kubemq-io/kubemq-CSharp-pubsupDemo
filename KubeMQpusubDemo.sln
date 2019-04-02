@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2046
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubeMQpub", "KubeMQpub\KubeMQpub.csproj", "{36F3FD38-D8DD-4A4E-8EC0-AC85F6E52D11}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubeMQpub", "KubeMQpub\KubeMQpub.csproj", "{36F3FD38-D8DD-4A4E-8EC0-AC85F6E52D11}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KubeMQsub", "KubeMQsub\KubeMQsub.csproj", "{4A3895BD-F6F4-4BE8-812F-B903DBBDE18A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "KubeMQsub", "KubeMQsub\KubeMQsub.csproj", "{4A3895BD-F6F4-4BE8-812F-B903DBBDE18A}"
+EndProject
+Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{0D45C7CD-9B67-4F87-AB5D-AF4DB13A286C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{4A3895BD-F6F4-4BE8-812F-B903DBBDE18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A3895BD-F6F4-4BE8-812F-B903DBBDE18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A3895BD-F6F4-4BE8-812F-B903DBBDE18A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0D45C7CD-9B67-4F87-AB5D-AF4DB13A286C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0D45C7CD-9B67-4F87-AB5D-AF4DB13A286C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0D45C7CD-9B67-4F87-AB5D-AF4DB13A286C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0D45C7CD-9B67-4F87-AB5D-AF4DB13A286C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

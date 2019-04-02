@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFrameworks>netstandard2.0;net461;net471</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.1;net461;net471</TargetFrameworks>
     <Authors>KubeMQ</Authors>
     <Company>KubeMQ</Company>
     <OutputType>Exe</OutputType>
@@ -9,7 +9,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Grpc" Version="1.19.0" />
     <PackageReference Include="KubeMQ.SDK.csharp" Version="1.0.4" />
   </ItemGroup>
 
