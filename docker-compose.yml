@@ -1,4 +1,4 @@
-version: '3.4'
+﻿version: '3.4'
 
 services:
   kubemqpub:
@@ -11,3 +11,17 @@ services:
     build:
       context: .
       dockerfile: KubeMQsub/Dockerfile
+
+  kubemqpubstore:
+    image: kubemq/kubemqpubstore_demo
+    build:
+      context: .
+      dockerfile: KubeMQpubstore/Dockerfile
+
+
+  kubemqsubstore:
+    image: kubemq/kubemqsubstore_demo
+    build:
+      context: .
+      dockerfile: KubeMQsubstore/Dockerfile
+
